@@ -4,7 +4,14 @@
  4) [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) 
  5) [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)
  6) [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
- 7) 
+ 7) [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
+ 8) [Missing Number](https://leetcode.com/problems/missing-number/description/)
+ 9) [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/description/)
+ 10) [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)
+ 11) [Consecutive Characters](https://leetcode.com/problems/consecutive-characters/description/)
+ 12) [Add Strings](https://leetcode.com/problems/add-strings/description/)
+ 13) [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/)
+ 14) 
 
 
 ## 🟢 Easy (Легкие)
@@ -13,8 +20,8 @@
 
 | Тема                       | Задача                                                                                                                                                      |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Массивы / Two Pointers** | ~~Two Sum, Move Zeroes, Merge Sorted Array, Squares of a Sorted Array, Remove Duplicates from Sorted Array~~, Intersection of Two Arrays II, Missing Number |
-| **Строки**                 | ~~Valid Palindrome~~, Jewels and Stones, First Unique Character in a String, Consecutive Characters, Add Strings, Reverse Words in a String III             |
+| **Массивы / Two Pointers** | ~~Two Sum, Move Zeroes, Merge Sorted Array, Squares of a Sorted Array, Remove Duplicates from Sorted Array, Intersection of Two Arrays II, Missing Number~~ |
+| **Строки**                 | ~~Valid Palindrome, Jewels and Stones, First Unique Character in a String, Consecutive Characters, Add Strings, Reverse Words in a String III~~             |
 | **Списки / Стеки**         | Valid Parentheses, Merge Two Sorted Lists, Reverse Linked List, Number of Recent Calls, Implement Queue using Stacks                                        |
 | **Деревья**                | Symmetric Tree, Range Sum of BST                                                                                                                            |
 | **Другое**                 | Summary Ranges, Is Subsequence                                                                                                                              |

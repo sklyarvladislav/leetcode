@@ -19,8 +19,8 @@ func twoSum(nums []int, target int) []int {
 }
 ```
 
-time complexity: $$ O(n^2) $$
-space complexity: $$ O(1) $$
+time complexity:$$ O(n^2) $$
+space complexity:$$ O(1) $$
 ### 2 способ: 
 
 - хеш-мапа с двумя обходами, здесь мы проходим первый раз и заполняем словарь со значениями, во второй раз сравнимаем разность нашей цели и текущим элементом, если разность есть в словаре, то выводим индексы, если нет то идем далее, тут время 
@@ -44,8 +44,8 @@ func twoSum(nums []int, target int) []int {
 }
 ```
 
-time complexity: $$ O(n) $$
-space complexity: $$ O(n) $$
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
 ### 3 способ:
 
 - за один обход и добавляем значения если нет дополнения, если есть, то сразу выводим ответ. временная сложность и используемая память равны предыдущему способу
@@ -67,8 +67,8 @@ func twoSum(nums []int, target int) []int {
 }
 ```
 
-time complexity: $$ O(n) $$
-space complexity: $$ O(n) $$
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
 
 ---
 ## [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)
@@ -96,8 +96,8 @@ func isPalindrome(s string) bool {
 } 
 ```
 
-time complexity: $$ O(n) $$
-space complexity: $$ O(n) $$
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
 ### 2 способ:
 
 - просто два указателя используем и ведем их пока пары сходятся, так же можно реализовать функцию проверки символа через ASCII таблицу
@@ -130,7 +130,7 @@ func isPalindrome(s string) bool {
 ```
 
 time complexity:$$ O(n) $$
-space complexity:$$O(1)$$
+space complexity:$$ O(1) $$
 
 ---
 ## [Move Zeroes](https://leetcode.com/problems/move-zeroes)
@@ -151,8 +151,8 @@ func moveZeroes(nums []int) {
 }
 ```
 
-time complexity:$$O(n)$$
-space complexity:$$O(1)$$
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
 
 ---
 
@@ -172,8 +172,8 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 }
 ```
 
-time complexity:$$O((m+n)log(m+n))$$
-space complexity:$$O(1)$$
+time complexity:$$ O((m+n) \cdot log(m+n)) $$
+space complexity:$$ O(1) $$
 ### 2 способ:
 
 - мы имеем три указателя, один указывает на конец реальных значений первого массива, второй указывает на конец второго массива и третий указывает на конец всего первого массива, затем начинаем из второго массива сравнивать с последним элементом первого, если из второго массива элемент больше то ставим в конец первого массива и так сравниваем и переставляем
@@ -197,8 +197,8 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 }
 ```
 
-time complexity:$$O(n+m)$$
-space complexity:$$O(1)$$
+time complexity:$$ O(n+m) $$
+space complexity:$$ O(1) $$
 
 ---
 ## [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)
@@ -218,8 +218,8 @@ func sortedSquares(nums []int) []int {
 }
 ```
 
-time complexity:$$O(n \cdot log(n))$$
-space complexity:$$O(1)$$
+time complexity:$$ O(n \cdot log(n)) $$
+space complexity:$$ O(1) $$
 ### 2 способ:
 
 - решать двумя указателями, так как у нас изначально массив отсортирован и есть отрицательные значения, то максимальные числа скорее всего буду иметь наибольший модуль, поэтому надо сравнивать краевые значения, у кого модуль выше того ставить в конец массива и затем возводить в квадрат
@@ -250,8 +250,8 @@ func sortedSquares(nums []int) []int {
 }
 ```
 
-time complexity:$$O(n)$$
-space complexity:$$O(1)$$
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
 
 ---
 ## [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
@@ -275,12 +275,201 @@ func removeDuplicates(nums []int) int {
 }
 ```
 
-time complexity:$$O(n)$$
-space complexity:$$O(1)$$
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
 
 ---
 ## [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
 
 ### 1 способ:
 
-- 
+-  создать хеш-мапу которая обозначает видели ли мы это число в другом массиве или нет, пробегаемся по первому массиву заполняем хеш-мапу, затем пробегаемся по второму, если там есть значения которые которые мы сохранили в хешмапу, значит добавляем в результат через аппенд
+
+```go
+func intersection(nums1 []int, nums2 []int) []int {
+	seen := make(map[int]bool)
+	result := make([]int, 0)
+	
+	for i := 0; i < len(nums1); i++ {
+		seen[nums1[i]] = true
+	}
+	
+	for i := 0; i < len(nums2); i++ {
+		if seen[nums2[i]] == true {
+			result = append(result, nums2[i])
+			seen[nums2[i]] = false
+		}
+	}
+	
+	return result
+}
+```
+
+time complexity:$$ O(n+m) $$
+space complexity:$$ O(n) $$
+
+---
+## [Missing Number](https://leetcode.com/problems/missing-number/description/)
+
+### 1 способ:
+
+- Гениальное решение, просто считаем сумму арифметической прогрессии, а затем вычитаем все значения из суммы которые лежат в массиве, оставшийся результат это и есть недостающее число
+
+```go
+func missingNumber(nums []int) int {
+	result := (len(nums) * (len(nums) + 1)) / 2
+	
+	for _, value := range nums {
+		result -= value
+	}
+
+	return value
+}
+```
+
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
+
+---
+## [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/description/)
+
+### 1 способ:
+
+- короче создать хеш-мапу с просмотренными символами из драгоценностей, затем бежать по списку камней и если это значение есть в хеш-мапе то увеличивать счетчик
+
+```go
+func numJewelsInStones(jewels string, stones string) int {
+	seen := make(map[byte]bool)
+	result := 0
+	
+	for i := 0; i < len(jewels); i++ {
+		seen[jewels[i]] = true
+	}
+	
+	for i := 0; i < len(stones); i++ {
+		if seen[stones[i]] == true {
+			result++
+		}
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n+m) $$
+space complexity:$$ O(n) $$
+
+---
+## [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)
+
+### 1 способ:
+
+- тоже создать хеш-мапу где вести подсчет какие символы встретились, затем вторым циклом пробегаться заново по строке и первый символ который в хеш-мапе будет только один раз его и вернуть
+
+```go
+func firstUniqChar(s string) int {
+	seen := make(map[rune]int)
+	
+	for _, char := range s {
+		seen[char]++
+	}
+	
+	for idx, char := range s {
+		if seen[char] == 1 {
+			return idx
+		}
+	}
+	
+	return -1
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Consecutive Characters](https://leetcode.com/problems/consecutive-characters/description/)
+
+### 1 способ:
+
+- короч создаем переменную куда будем складывать наибольшее значение и левый указатель который будет указывать на начало строки нашей максимальной, затем циклом идем по строке, если дошли до конца или у нас символы различаются, то мы перезаписываем переменную мощности и сдвигаем левый указатель на следующий индекс где у нас закончилась строка
+
+```go
+func maxPower(s string) int {
+	if len(s) == 0 { return 0 }
+	power, l := 1, 0
+	
+	for idx := range s {
+		if idx == len(s) - 1 || s[idx] != s[idx+1] {
+			power = max(power, idx - l + 1)
+			l = idx + 1
+		}
+	}
+	
+	return power
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
+
+---
+## [Add Strings](https://leetcode.com/problems/add-strings/description/)
+
+### 1 способ:
+
+- реализовываем сложение по принципу сложения в столбик с переменной под перенос разряда и отсчет с конца числа
+
+```go
+func addStrings(num1 string, num2 string) string {
+	i, j := len(num1) - 1, len(num2) - 1
+	carry := 0
+	result := ""
+	
+	for i >= 0 || j >= 0 {
+		x, y := 0, 0
+		if i >= 0 {
+			x = int(num1[i] - '0')
+		}
+		if j >= 0 {
+			y = int(num2[j] - '0')
+		}
+		sum := x + y + carry
+		carry = sum / 10
+		result = strconv.Itoa(sum%10) + result
+		i--
+		j--
+	}
+	if carry != 0 {
+		result = strconv.Itoa(carry) + result
+	}
+	
+	return result
+	
+}
+```
+time complexity:$$ O(max(n, m)) $$
+space complexity:$$ O(max(n, m)) $$
+
+---
+## [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/)
+
+## 1 способ:
+
+- парсим список слов в массив через split, затем каждое слово кастуем в руны и двумя указателями за один цикл меняем местами элементы, а затем обратно в аски кидаем и возвращаем в строку через join
+
+```go
+func reverseWords(s string) string {
+	words := strings.Split(s, " ")
+	for idx, word := range words {
+		runes := []rune(word)
+		for i, j := 0, len(runes) - 1; i < j; i, j = i+1, j-1 {
+			runes[i], runes[j] = runes[j], runes[i]
+		}
+		words[idx] = string(runes)
+	}
+	
+	return strings.Join(words, " ")
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
