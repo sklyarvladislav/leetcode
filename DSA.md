@@ -473,3 +473,84 @@ time complexity:$$ O(n) $$
 space complexity:$$ O(n) $$
 
 ---
+## [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)
+
+### 1 способ: 
+
+-  решать стеком, и хешмапой. Идем по нашей строке, если попадается закрывающаяся, то проверяем является ли последняя скобка в нашем стеке подходящей, если нет то возвращаем сразу фолс, если да то срезаем стек до нуля. Если скобка открывающаяся то добавляем в стек
+
+```go
+func isValid(s string) bool {
+	stack := []rune{}
+	brackets := map[rune]rune{']':'[', ')':'(', '}':'{'}
+	
+	for _, char := range s {
+		if bracket, ok := brackets[char]; ok {
+			if len(stack) > 0 && stack[len(stack) - 1] == bracket {
+				stack = stack[:len(stack) - 1]
+			} else {
+				return false
+			}
+		} else {
+			stack = append(stack, char)
+		}
+	}
+	
+	return len(stack) == 0
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
+
+### 1 способ:
+
+- рекурсивно сравниваем значение текущих узлов, что меньше тому следующему присваиваем результат функции этой же но без текущего узла, а затем делаем возврат значения. Если у нас какой-то из списков закончился, то возвращаем просто другой список полностью.
+
+```go
+func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
+	if list1 == nil { return list2 }
+	if list2 == nil { return list1 }
+	
+	if list1.Val < list2.Val {
+		list1.Next = mergeTwoLists(list1.Next, list2)
+		return list1
+	} else {
+		list2.Next = mergeTwoLists(list1, list2.Next)
+		return list2
+	}
+}
+```
+time complexity:$$ O(n + m) $$
+space complexity:$$ O(n + m) $$
+
+---
+## [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)
+
+### 1 способ:
+
+- с помощью трех указателей разворачиваем стрелки в списке, создаем вспомогательный указатель на текущий узел, на следующий и на предыдущий, сначала надо в следующий сохранить следующий узел чтобы не потерять его когда привязку от текущего мы перенесем со следующего на предыдущий
+
+```go
+func reverseList(head *ListNode) *ListNode {
+	var previous ListNode
+	current := head 
+	
+	for current != nil {
+		next := current.Next
+		
+		current.Next = previous
+		
+		previous = current
+		current = next
+	}
+	
+	return previous
+}
+```
+time complexity: $$ O(n) $$
+space complexity: $$ O(1) $$
+
+---

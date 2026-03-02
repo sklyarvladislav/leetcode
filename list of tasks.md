@@ -8,10 +8,13 @@
  8) [Missing Number](https://leetcode.com/problems/missing-number/description/)
  9) [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/description/)
  10) [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)
- 11) [Consecutive Characters](https://leetcode.com/problems/consecutive-characters/description/)
- 12) [Add Strings](https://leetcode.com/problems/add-strings/description/)
- 13) [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/)
- 14) 
+ 11) [Consecutive Characters](https://leetcode.com/problems/consecutive-characters/description/) - еще раз прорешать
+ 12) [Add Strings](https://leetcode.com/problems/add-strings/description/) - еще раз прорешать
+ 13) [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/description/) - еще раз прорешать
+ 14) [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)
+ 15) [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
+ 16) [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)
+ 17) 
 
 
 ## 🟢 Easy (Легкие)
@@ -22,7 +25,7 @@
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Массивы / Two Pointers** | ~~Two Sum, Move Zeroes, Merge Sorted Array, Squares of a Sorted Array, Remove Duplicates from Sorted Array, Intersection of Two Arrays II, Missing Number~~ |
 | **Строки**                 | ~~Valid Palindrome, Jewels and Stones, First Unique Character in a String, Consecutive Characters, Add Strings, Reverse Words in a String III~~             |
-| **Списки / Стеки**         | Valid Parentheses, Merge Two Sorted Lists, Reverse Linked List, Number of Recent Calls, Implement Queue using Stacks                                        |
+| **Списки / Стеки**         | ~~Valid Parentheses, Merge Two Sorted Lists, Reverse Linked List~~, Number of Recent Calls, Implement Queue using Stacks                                    |
 | **Деревья**                | Symmetric Tree, Range Sum of BST                                                                                                                            |
 | **Другое**                 | Summary Ranges, Is Subsequence                                                                                                                              |
 
@@ -30,15 +33,15 @@
 
 Это «золотой стандарт» технических интервью. Большинство вопросов на собеседованиях попадают именно сюда.
 
-|Тема|Задача|
-|---|---|
-|**Sliding Window**|Longest Substring Without Repeating Characters, Find All Anagrams in a String, Permutation in String, Longest Substring with At Most Two Distinct Characters, Max Consecutive Ones II, Max Consecutive Ones III, Longest Subarray of 1’s After Deleting One Element|
-|**Массивы / Two Pointers**|Subarray Sum Equals K, Continuous Subarray Sum, Product of Array Except Self, Partition Labels, String Compression, Two Sum II, 3Sum (подразумевается), Meeting Rooms II, Merge Intervals, Interval List Intersections, Maximize Distance to Closest Person|
-|**Хеш-таблицы / Дизайн**|Group Anagrams, LRU Cache, Insert Delete GetRandom O(1), Design Hit Counter, Zigzag Iterator, Flatten Nested List Iterator, Max Stack|
-|**Деревья / Графы**|Validate Binary Search Tree, Lowest Common Ancestor of a Binary Tree (I & III), Number of Islands, Generate Parentheses|
-|**Списки**|Add Two Numbers, Remove Nth Node From End of List, Palindrome Linked List|
-|**Поиск / Математика**|Search in Rotated Sorted Array, Find Minimum in Rotated Sorted Array, Implement Rand10() Using Rand7(), Perfect Squares, Simplify Path, Evaluate Reverse Polish Notation|
-|**Строки**|Longest Palindromic Substring, One Edit Distance, Line Reflection|
+| Тема                       | Задача                                                                                                                                                                                                                                                              |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sliding Window**         | Longest Substring Without Repeating Characters, Find All Anagrams in a String, Permutation in String, Longest Substring with At Most Two Distinct Characters, Max Consecutive Ones II, Max Consecutive Ones III, Longest Subarray of 1’s After Deleting One Element |
+| **Массивы / Two Pointers** | Subarray Sum Equals K, Continuous Subarray Sum, Product of Array Except Self, Partition Labels, String Compression, Two Sum II, 3Sum (подразумевается), Meeting Rooms II, Merge Intervals, Interval List Intersections, Maximize Distance to Closest Person         |
+| **Хеш-таблицы / Дизайн**   | Group Anagrams, LRU Cache, Insert Delete GetRandom O(1), Design Hit Counter, Zigzag Iterator, Flatten Nested List Iterator, Max Stack                                                                                                                               |
+| **Деревья / Графы**        | Validate Binary Search Tree, Lowest Common Ancestor of a Binary Tree (I & III), Number of Islands, Generate Parentheses                                                                                                                                             |
+| **Списки**                 | Add Two Numbers, Remove Nth Node From End of List, Palindrome Linked List                                                                                                                                                                                           |
+| **Поиск / Математика**     | Search in Rotated Sorted Array, Find Minimum in Rotated Sorted Array, Implement Rand10() Using Rand7(), Perfect Squares, Simplify Path, Evaluate Reverse Polish Notation                                                                                            |
+| **Строки**                 | Longest Palindromic Substring, One Edit Distance, Line Reflection                                                                                                                                                                                                   |
 
 ## 🔴 Hard (Сложные)
 
