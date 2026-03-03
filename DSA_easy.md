@@ -535,7 +535,7 @@ space complexity:$$ O(n + m) $$
 
 ```go
 func reverseList(head *ListNode) *ListNode {
-	var previous ListNode
+	var previous *ListNode
 	current := head 
 	
 	for current != nil {
@@ -689,7 +689,7 @@ func isMirror(left, right *TreeNode) bool {
 }
 ```
 time complexity:$$ O(n) $$
-space complexity:$$ O(1) $$
+space complexity:$$ O(h) $$
 
 ---
 ## [Range sum of BST](https://leetcode.com/problems/range-sum-of-bst)
@@ -749,3 +749,29 @@ func summaryRanges(nums []int) []string {
 	return result
 }
 ```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Is Subsequence](https://leetcode.com/problems/is-subsequence/description/)
+
+### 1 способ:
+
+- двумя указателями пробегаемся по двум строкам находим одинаковые элементы добавляем и если в конце длина строки первой равна индексу значит нашли все подходящие элементы
+
+```go
+func isSubsequence(s string, t string) bool {
+	i, j := 0, 0
+	
+	for i < len(s) && j < len(s) {
+		if s[i] == t[j] {
+			i++
+		}
+		j++
+	}
+	
+	return len(s) == i
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
