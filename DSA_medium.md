@@ -56,7 +56,7 @@ func findAnagrams(s string, p string) []int {
 }
 ```
 time complexity:$$ O(n) $$
-space complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
 
 ---
 ## [Permutation in String](https://leetcode.com/problems/permutation-in-string)
@@ -91,3 +91,93 @@ time complexity:$$ O(n) $$
 space complexity:$$ O(1) $$
 
 ---
+## [Max Consecutive Ones |||](https://leetcode.com/problems/max-consecutive-ones-iii)
+
+### 1 способ:
+
+- скользящим окном, пока k достаточно на нулей, то увеличиваем окно, когда недостаточно то левую границу перебираем
+
+```go
+func longestOnes(nums []int, k int) int {
+	l, zeros, result := 0, 0, 0
+	
+	for r := 0; r < len(nums); r++ {
+		if nums[r] == 0 {
+			zeros++
+		}
+		
+		for k < zeros {
+			if nums[l] == 0 {
+				zeros--
+			}
+			l++
+		}
+		
+		result = max(result, r - l  + 1)
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
+
+---
+## [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description)
+
+### 1 способ:
+
+- точно такой же способ при помощи скользящего окна
+
+```go
+func longestSubarray(nums []int) int {
+	l, k, result := 0, 0, 0
+	
+	for r := 0; r < len(nums); r++ {
+		if nums[r] == 0 {
+			k ++
+		}
+		if k > 1 {
+			if nums[l] == 0 {
+				k--
+			}
+			l++
+		}
+		
+		result = max(result, r - l + 1)
+	}
+	
+	return result - 1
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
+
+---
+## [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement)
+
+### 1 способ:
+
+- скользящее окно и вспомогательный массив, мы узнаем счетчик максимально повторяющегося элемента, затем если оно  у нас превышает лимит то сдвигаем левую рамку окна
+
+```go
+func characterReplacement(s string, k int) int {
+	seen := make(map[byte]int)
+	l, result, maxFreq := 0, 0, 0
+	for r := 0; r < len(s); r++ {
+		seen[s[r]]++
+		maxFreq = max(maxFreq, seen[s[r]])
+		
+		if (r-l+1) - maxFreq > k {
+			seen[s[l]]--
+			l++
+		}
+		
+		result = max(result, r - l + 1)
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$

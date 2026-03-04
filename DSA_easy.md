@@ -936,3 +936,26 @@ space complexity:$$ O(h) $$
 ## [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/description/)
 
 ### 1 способ:
+
+- короче используем из предыдущей задачи сравнивание равны ли деревья и сравниваем поддерево с каждым узлом нашего дерева
+
+```go
+func isSubtree(root *TreeNode, subRoot *TreeNode) bool {
+	if root == nil { return false }
+	if subRoot == nil { return true }
+	if isIdent(root, subRoot) { return true }
+	
+	return isSubtree(root.Left, subRoot) || isSubtree(root.Right, subRoot)
+}
+
+func isIdent(left, right *TreeNode) bool {
+	if left == nil && right == nil { return true }
+	if left == nil || right == nil { return false }
+	if left.Val != right.Val { return false }
+	
+	return isIdent(left.Left, right.Left) && isIdent(left.Right, right.Right)
+}
+```
+time complexity:$$ O(n \cdot m) $$
+space complexity:$$ O(n \cdot m) $$
+

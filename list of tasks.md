@@ -35,18 +35,18 @@
 25) Same Tree  ⛔️
 26) Maximum Depth of Binary Tree  ⛔️
 27) Invert Binary Tree  ⛔️
-28) Subtree of Another Tree  
-29) Range Sum of BST  
+28) Subtree of Another Tree  ⛔️
+29) Range Sum of BST  ⛔️
 
 ## Другое
-30) Summary Ranges  
+30) Summary Ranges  ⛔️
 
 
 # 🟡 Medium
 
 ## Sliding Window
-31) Longest Substring Without Repeating Characters  
-32) Find All Anagrams in a String  
+31) Longest Substring Without Repeating Characters  ⛔️
+32) Find All Anagrams in a String  ⛔️
 33) Permutation in String  
 34) Longest Substring with At Most Two Distinct Characters  
 35) Max Consecutive Ones II  
