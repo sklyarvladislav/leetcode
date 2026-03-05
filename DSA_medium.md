@@ -181,3 +181,121 @@ func characterReplacement(s string, k int) int {
 ```
 time complexity:$$ O(n) $$
 space complexity:$$ O(1) $$
+
+---
+## [Subarray sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k)
+
+### 1 способ: 
+
+- при помощи метода префиксных сумм и хеш-мапой в которой мы будем хранить все состояния нашей префиксной суммы, если у нас разность преф суммы на какой-то итерации и наше искомое число равны, значит добавляем к нашему результату количество таких сумм
+
+```go
+func subarraySum(nums []int, k int) int {
+	seen := make(map[int]int)
+	seen[0] = 1
+	result, prefixSum := 0, 0
+	
+	for _, num := range nums {
+		prefixSum += num
+		if counter, ok := seen[prefixSum - k]; ok {
+			result += counter
+		}
+		seen[prefixSum]++
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum)
+
+### 1 способ: 
+
+- при помощи метода префиксных сумм записывать в хеш-мапу остатки префиксной суммы в мапу и затем проверять что разница индексов более 2
+
+```go
+func checkSubarraySum(nums []int, k int) bool {
+	seen := make(map[int]int)
+	seen[0] = -1
+	prefixSum := 0
+	
+	for i, num := range nums {
+		prefixSum += num
+		if value, ok := seen[prefixSum % k]; ok {
+			if i - value >= 2 {
+				return true
+			}
+		} else {
+			seen[prefixSum % k] = i
+		}
+	}
+	
+	return false
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description)
+
+### 1 способ:
+
+-  при помощи петода префиксных сумм мы сохраняем сначала первым циклом произведения всех элементов слева, а затем проходимся вторым циклом с конца до начала и дополняем произведениями элементов справа
+
+```go
+func productExceptSelf(nums []int) []int {
+	result := make([]int, len(nums))
+	helper := 1
+	
+	for i := 0; i < len(nums); i++ {
+		result[i] = helper
+		helper *= nums[i]
+	}
+	
+	helper = 1
+	
+	for i := len(nums) - 1; i >= 0; i-- {
+		result[i] *= helper
+		helper *= nums[i]
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+extra space complexity:$$ O(1) $$
+
+---
+## [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description)
+
+### 1 способ:
+
+- просто проходим по массиву и сохраняем префиксную сумму, если она больше нашего изначального максимум, то обновляем максимум. Если префикс сумма стала меньше нуля, то смысла ее нести за собой нет, мы ее обнуляем
+
+```go
+func maxSubArray(nums []int) int {
+	result, prefixSum := nums[0], 0
+	
+	for _, num := range nums {
+		prefixSum += num
+		result = max(result, prefixSum)
+		if prefixSum < 0 { prefixSum = 0 }
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
+
+---
+## [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description)
+
+### 1 способ:
+
+- 

@@ -959,3 +959,53 @@ func isIdent(left, right *TreeNode) bool {
 time complexity:$$ O(n \cdot m) $$
 space complexity:$$ O(n \cdot m) $$
 
+---
+## [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list)
+
+### 1 способ:
+
+- просто создаем массив и записываем туда все значения по порядку, а затем проверяем является ли массив палиндромом
+
+```go
+func isPalindrome(head *ListNode) bool {
+	LinkedList := make([]int, 0)
+	
+	for head != nil {
+		LinkedList = append(LinkedList, head.Val)
+		head = head.Next
+	}
+	
+	for i, j := 0, len(LinkedList)-1; i < j; i, j = i+1, j-1 {
+		if LinkedList[i] != LinkedList[j] {
+			return false
+		}
+	}
+	
+	return true
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Valid Anagram](https://leetcode.com/problems/valid-anagram)
+
+### 1 способ: 
+
+- короче просто создаем паттерн и мемори, идем по строке первой и проверяем если они равны значит анаграмм валиден
+
+```go
+func isAnagram(s string, t string) bool {
+	if len(s) != len(t) { return false }
+	var memory, patter [26]int
+	
+	for i := range s {
+		pattern[s[i] - 'a']++
+		memory[t[i] - 'a']++
+	} 
+	
+	return memory == pattern
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$

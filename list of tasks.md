@@ -1,119 +1,118 @@
 # 🟢 Easy
 
 ## Массивы / Two Pointers
-1) Two Sum  
-2) Move Zeroes  
-3) Merge Sorted Array  
-4) Squares of a Sorted Array  
-5) Remove Duplicates from Sorted Array  ⛔️
-6) Intersection of Two Arrays  
-7) Contains Duplicate  
-8) Missing Number  
+1) Two Sum
+2) Move Zeroes
+3) Merge Sorted Array
+4) Squares of a Sorted Array
+5) Remove Duplicates from Sorted Array ⛔️
+6) Intersection of Two Arrays
+7) Contains Duplicate
+8) Missing Number
 ## Строки
-9) Valid Palindrome  
-10) Jewels and Stones  
-11) First Unique Character in a String  
-12) Consecutive Characters  ⛔️
-13) Add Strings  
-14) Reverse Words in a String III  
-15) Is Subsequence  ⛔️
+9) Valid Palindrome
+10) Jewels and Stones
+11) First Unique Character in a String
+12) Consecutive Characters ⛔️
+13) Add Strings
+14) Reverse Words in a String III
+15) Is Subsequence ⛔️
+16) Valid Anagram
 
 ## Биты
-16) Reverse Bits  ⛔️
-17) Number of 1 Bits  ⛔️
+17) Reverse Bits  ⛔️
+18) Number of 1 Bits  ⛔️
 
 ## Списки / Стек / Очередь
-18) Valid Parentheses  
-19) Merge Two Sorted Lists  
-20) Reverse Linked List  
-21) Linked List Cycle  ⛔️
-22) Number of Recent Calls  
-23) Implement Queue using Stacks  
+19) Valid Parentheses  
+20) Merge Two Sorted Lists  
+21) Reverse Linked List  
+22) Palindrome Linked List  
+23) Linked List Cycle  ⛔️
+24) Number of Recent Calls  
+25) Implement Queue using Stacks  
 
 ## Деревья
-24) Symmetric Tree  
-25) Same Tree  ⛔️
-26) Maximum Depth of Binary Tree  ⛔️
-27) Invert Binary Tree  ⛔️
-28) Subtree of Another Tree  ⛔️
-29) Range Sum of BST  ⛔️
+26) Symmetric Tree  
+27) Same Tree  ⛔️
+28) Maximum Depth of Binary Tree  ⛔️
+29) Invert Binary Tree  ⛔️
+30) Subtree of Another Tree  ⛔️
+31) Range Sum of BST  ⛔️
 
 ## Другое
-30) Summary Ranges  ⛔️
+32) Summary Ranges  ⛔️
 
-
+---
 # 🟡 Medium
 
 ## Sliding Window
-31) Longest Substring Without Repeating Characters  ⛔️
-32) Find All Anagrams in a String  ⛔️
-33) Permutation in String  
-34) Longest Substring with At Most Two Distinct Characters  
-35) Max Consecutive Ones II  
-36) Max Consecutive Ones III  
-37) Longest Subarray of 1’s After Deleting One Element  
-38) Longest Repeating Character Replacement  
+33) Longest Substring Without Repeating Characters  ⛔️
+34) Find All Anagrams in a String  ⛔️
+35) Permutation in String  
+36) Longest Substring with At Most Two Distinct Characters  
+37) Max Consecutive Ones II  
+38) Max Consecutive Ones III  
+39) Longest Subarray of 1’s After Deleting One Element  
+40) Longest Repeating Character Replacement  
 
 ## Префиксные суммы / Хеш + массив
-39) Subarray Sum Equals K  
-40) Continuous Subarray Sum  
-41) Product of Array Except Self  
-42) Maximum Subarray  
-43) Maximum Product Subarray  
+41) Subarray Sum Equals K  
+42) Continuous Subarray Sum  
+43) Product of Array Except Self  
+44) Maximum Subarray  
+45) Maximum Product Subarray  
 
 ## Two Pointers / Greedy
-44) Container With Most Water  
-45) Partition Labels  
-46) String Compression  
-47) Jump Game  
-48) Maximize Distance to Closest Person  
-49) Non-overlapping Intervals  
+46) Container With Most Water  
+47) Partition Labels  
+48) String Compression  
+49) Jump Game  
+50) Maximize Distance to Closest Person  
+51) Non-overlapping Intervals  
 
 ## Интервалы
-50) Meeting Rooms II  
-51) Merge Intervals  
-52) Insert Interval  
-53) Interval List Intersections  
+52) Meeting Rooms II  
+53) Merge Intervals  
+54) Insert Interval  
+55) Interval List Intersections  
 
-## Хеш-таблицы
-54) Valid Anagram  
-55) Group Anagrams  
-56) Top K Frequent Elements  
+## Хеш-таблицы 
+56) Group Anagrams  
+57) Top K Frequent Elements  
 
 ## Дизайн структур данных
-57) LRU Cache  
-58) Insert Delete GetRandom O(1)  
-59) Design Hit Counter  
-60) Zigzag Iterator  
-61) Flatten Nested List Iterator  
-62) Max Stack  
+58) LRU Cache  
+59) Insert Delete GetRandom O(1)  
+60) Design Hit Counter  
+61) Zigzag Iterator  
+62) Flatten Nested List Iterator  
 63) Encode and Decode Strings  
 
 ## Списки
 64) Add Two Numbers  
 65) Remove Nth Node From End of List  
-66) Palindrome Linked List  
-67) Reorder List  
+66) Reorder List  
 
 ## Бинарный поиск
-68) Search in Rotated Sorted Array  
-69) Find Minimum in Rotated Sorted Array  
-70) Kth Smallest Element in a BST  
+67) Search in Rotated Sorted Array  
+68) Find Minimum in Rotated Sorted Array  
+69) Kth Smallest Element in a BST  
 
 ## Деревья
-71) Validate Binary Search Tree  
-72) Binary Tree Level Order Traversal  
-73) Construct Binary Tree from Preorder and Inorder Traversal  
-74) Lowest Common Ancestor of a Binary Tree (I & III)  
-75) Lowest Common Ancestor of a Binary Search Tree  
+70) Validate Binary Search Tree  
+71) Binary Tree Level Order Traversal  
+72) Construct Binary Tree from Preorder and Inorder Traversal  
+73) Lowest Common Ancestor of a Binary Tree (I & III)  
+74) Lowest Common Ancestor of a Binary Search Tree  
 
 ## Графы
-76) Number of Islands  
-77) Graph Valid Tree  
-78) Number of Connected Components in an Undirected Graph  
-79) Clone Graph  
-80) Course Schedule  
-81) Pacific Atlantic Water Flow  
+75) Number of Islands  
+76) Graph Valid Tree  
+77) Number of Connected Components in an Undirected Graph  
+78) Clone Graph  
+79) Course Schedule  
+80) Pacific Atlantic Water Flow  
 
 ## Backtracking
 82) Generate Parentheses  
@@ -146,7 +145,7 @@
 ## Trie
 102) Implement Trie (Prefix Tree)  
 
-
+---
 # 🔴 Hard
 
 ## Sliding Window
@@ -164,13 +163,14 @@
 108) Serialize and Deserialize Binary Tree  
 
 ## Матрицы / Стек / DP
-109) Maximal Rectangle  
+109) Maximal Rectangle 
+110) Max Stack  
 
 ## Графы / Topological Sort
-110) Alien Dictionary  
+111) Alien Dictionary  
 
 ## Бинарный поиск
-111) Median of Two Sorted Arrays  
+112) Median of Two Sorted Arrays  
 
 ## Backtracking + Trie
-112) Word Search II  
+113) Word Search II  
