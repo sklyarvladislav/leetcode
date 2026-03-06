@@ -9,9 +9,7 @@ func lengthOfLongestSubstring(s string) int {
 	start, result := 0, 0
 	for end := 0; end < len(s); end++ {
 		char := s[end]
-		if seen[char] > start {
-			start = seen[char]
-		}
+		start = max(start, seen[char])
 		result = max(result, end-start+1)
 		seen[char] = end + 1
 	}
@@ -298,4 +296,22 @@ space complexity:$$ O(1) $$
 
 ### 1 способ:
 
-- 
+- короче завести три переменные, максимальное произведение, минимальное произведение и наш ответ, идти по массиву и сохранять если у нас произведение меняется
+
+```go
+func maxProduct(nums []int) int {
+	productMax, productMin, result := nums[0], nums[0], nums[0]
+	
+	for i := 1; i < len(nums); i++ {
+		num := nums[i]
+		templateMax := max(num, max(num*productMax, num*productMin))
+		productMin = min(num, min(num*productMax, num*productMin))
+		productMax = templateMax
+		result = max(result, productMax)
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$

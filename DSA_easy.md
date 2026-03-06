@@ -395,12 +395,12 @@ space complexity:$$ O(n) $$
 ```go
 func maxPower(s string) int {
 	if len(s) == 0 { return 0 }
-	power, l := 1, 0
+	l, power := 0, 1
 	
-	for idx := range s {
-		if idx == len(s) - 1 || s[idx] != s[idx+1] {
-			power = max(power, idx - l + 1)
-			l = idx + 1
+	for r := range s {
+		if r == len(s)-1 || s[r] != s[r+1] {
+			power = max(power, r-l+1)
+			l = r+1
 		}
 	}
 	
@@ -477,7 +477,7 @@ space complexity:$$ O(n) $$
 
 ### 1 способ: 
 
--  решать стеком, и хешмапой. Идем по нашей строке, если попадается закрывающаяся, то проверяем является ли последняя скобка в нашем стеке подходящей, если нет то возвращаем сразу фолс, если да то срезаем стек до нуля. Если скобка открывающаяся то добавляем в стек
+- решать стеком, и хешмапой. Идем по нашей строке, если попадается закрывающаяся, то проверяем является ли последняя скобка в нашем стеке подходящей, если нет то возвращаем сразу фолс, если да то срезаем стек до нуля. Если скобка открывающаяся то добавляем в стек
 
 ```go
 func isValid(s string) bool {
@@ -986,6 +986,52 @@ func isPalindrome(head *ListNode) bool {
 ```
 time complexity:$$ O(n) $$
 space complexity:$$ O(n) $$
+
+### 2 способ:
+
+- при помощи метода черепахи и зайца мы доходим до середина списка, вторую часть разворачиваем и затем сравниваем первую часть со вторым
+
+```go
+func isPalindrome(head *ListNode) bool {
+	slow, fast := head, head
+	
+	for fast != nil && fast.Next != nil {
+		fast = fast.Next.Next
+		slow = slow.Next
+	}
+	
+	if fast != nil {
+		slow = slow.Next
+	}
+	
+	tail := reverse(slow)
+	
+	for tail != nil {
+		if head.Val != tail.Val {
+			return false
+		}
+		head = head.Next
+		tail = tail.Next
+	}
+	
+	return true
+}
+
+func reverse(node *ListNode) *ListNode {
+	current := node
+	var previous *ListNode
+	for current != nil {
+		next := current.Next
+		current.Next = previous
+		previous = current
+		current = next
+	}
+	
+	return previous
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
 
 ---
 ## [Valid Anagram](https://leetcode.com/problems/valid-anagram)

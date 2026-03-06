@@ -5,7 +5,7 @@
 2) Move Zeroes
 3) Merge Sorted Array
 4) Squares of a Sorted Array
-5) Remove Duplicates from Sorted Array ⛔️
+5) Remove Duplicates from Sorted Array 
 6) Intersection of Two Arrays
 7) Contains Duplicate
 8) Missing Number
@@ -13,35 +13,35 @@
 9) Valid Palindrome
 10) Jewels and Stones
 11) First Unique Character in a String
-12) Consecutive Characters ⛔️
+12) Consecutive Characters 
 13) Add Strings
 14) Reverse Words in a String III
-15) Is Subsequence ⛔️
+15) Is Subsequence 
 16) Valid Anagram
 
 ## Биты
-17) Reverse Bits  ⛔️
-18) Number of 1 Bits  ⛔️
+17) Reverse Bits  
+18) Number of 1 Bits  
 
 ## Списки / Стек / Очередь
 19) Valid Parentheses  
 20) Merge Two Sorted Lists  
 21) Reverse Linked List  
 22) Palindrome Linked List  
-23) Linked List Cycle  ⛔️
+23) Linked List Cycle  
 24) Number of Recent Calls  
 25) Implement Queue using Stacks  
 
 ## Деревья
 26) Symmetric Tree  
-27) Same Tree  ⛔️
-28) Maximum Depth of Binary Tree  ⛔️
-29) Invert Binary Tree  ⛔️
-30) Subtree of Another Tree  ⛔️
-31) Range Sum of BST  ⛔️
+27) Same Tree  
+28) Maximum Depth of Binary Tree 
+29) Invert Binary Tree  
+30) Subtree of Another Tree  
+31) Range Sum of BST  
 
 ## Другое
-32) Summary Ranges  ⛔️
+32) Summary Ranges  
 
 ---
 # 🟡 Medium
@@ -49,19 +49,19 @@
 ## Sliding Window
 33) Longest Substring Without Repeating Characters  ⛔️
 34) Find All Anagrams in a String  ⛔️
-35) Permutation in String  
-36) Longest Substring with At Most Two Distinct Characters  
-37) Max Consecutive Ones II  
-38) Max Consecutive Ones III  
-39) Longest Subarray of 1’s After Deleting One Element  
-40) Longest Repeating Character Replacement  
+35) Permutation in String  ⛔️
+36) Longest Substring with At Most Two Distinct Characters  ⛔️
+37) Max Consecutive Ones II  ⛔️
+38) Max Consecutive Ones III  ⛔️
+39) Longest Subarray of 1’s After Deleting One Element  ⛔️
+40) Longest Repeating Character Replacement  ⛔️
 
 ## Префиксные суммы / Хеш + массив
-41) Subarray Sum Equals K  
-42) Continuous Subarray Sum  
-43) Product of Array Except Self  
-44) Maximum Subarray  
-45) Maximum Product Subarray  
+41) Subarray Sum Equals K  ⛔️
+42) Continuous Subarray Sum  ⛔️
+43) Product of Array Except Self  ⛔️
+44) Maximum Subarray  ⛔️
+45) Maximum Product Subarray  ⛔️
 
 ## Two Pointers / Greedy
 46) Container With Most Water  
