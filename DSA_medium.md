@@ -491,5 +491,82 @@ time complexity:$$ O(n \cdot log(n)) $$
 space complexity:$$ O(1) $$
 
 ---
+## [Merge Intervals](https://leetcode.com/problems/merge-intervals)
 
+### 1 способ: 
 
+- сортируем интервалы по их началу, добавляем в наш список самый первый а затем проверяем со следующим если начало после конца то добавляем в список, если нет то увеличиваем первый интервал
+
+```go
+func sortIntervals(intervals [][]int) {
+	sort.Slice(intervals, func (i, j int) bool {
+		return intervals[i][0] < intervals[j][0]
+	})
+}
+
+func merge(intervals [][]int) [][]int {
+	if len(intervals) <= 1 {
+		return intervals
+	}
+	
+	sortIntervals(intervals)
+	
+	result := make([][]int, 0, len(intervals))
+	result = append(result, intervals[0])
+	
+	for _, interval := range intervals[1:] {
+		if top := result[len(result)-1]; top[1] < interval[0] {
+			result = append(result, interval)
+		} else if interval[1] > top[1] {
+			top[1] = interval[1]
+		}
+	}
+
+	return result
+}
+```
+time complexity:$$ O(n \cdot log(n)) $$
+space complexity:$$ O(n) $$
+
+---
+## [Insert Interval](https://leetcode.com/problems/insert-interval/description)
+
+### 1 способ: 
+
+- делаем три цикла, в первом цикле добавляешь в конечный массив те интервалы которые заканчиваются до нового интервала, второй цикл проверяет если интервал начался до того как закончился новый, то проверяем и расширяем границы нового интервала этими интервалами, третий цикл добавляет оставшиеся интервалы
+
+```go
+func insert(intervals [][]int, newInterval []int) [][]int {
+	result := make([][]int, len(intervals)+1)
+	i := 0
+	
+	for i < len(intervals) && intervals[i][1] < newInterval[0] {
+		result = append(result, intervals[i])
+		i++
+	}
+	
+	for i < len(intervals) && intervals[i][0] <= newInterval[1] {
+		newInterval[0] = min(newInterval[0], intervals[i][0])
+		newInterval[1] = max(newInterval[1], intervals[i][1])
+		i++
+	}
+	
+	result = append(result, newInterval)
+	
+	for i < len(intervals) {
+		result = append(result, intervals[i])
+		i++
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections)
+
+### 1 способ:
+
+- 
