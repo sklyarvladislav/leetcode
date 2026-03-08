@@ -50,8 +50,8 @@
 33) Longest Substring Without Repeating Characters  
 34) Find All Anagrams in a String  
 35) Permutation in String  
-36) Longest Substring with At Most Two Distinct Characters  ⛔️
-37) Max Consecutive Ones II  ⛔️
+36) Longest Substring with At Most Two Distinct Characters  👑
+37) Max Consecutive Ones II  👑
 38) Max Consecutive Ones III  
 39) Longest Subarray of 1’s After Deleting One Element  
 40) Longest Repeating Character Replacement  
@@ -72,7 +72,7 @@
 51) Non-overlapping Intervals  
 
 ## Интервалы
-52) Meeting Rooms II  
+52) Meeting Rooms II  👑
 53) Merge Intervals  
 54) Insert Interval  
 55) Interval List Intersections  
@@ -84,10 +84,10 @@
 ## Дизайн структур данных
 58) LRU Cache  
 59) Insert Delete GetRandom O(1)  
-60) Design Hit Counter  
-61) Zigzag Iterator  
+60) Design Hit Counter  👑
+61) Zigzag Iterator  👑
 62) Flatten Nested List Iterator  
-63) Encode and Decode Strings  
+63) Encode and Decode Strings  👑
 
 ## Списки
 64) Add Two Numbers  
@@ -103,13 +103,13 @@
 70) Validate Binary Search Tree  
 71) Binary Tree Level Order Traversal  
 72) Construct Binary Tree from Preorder and Inorder Traversal  
-73) Lowest Common Ancestor of a Binary Tree (I & III)  
+73) Lowest Common Ancestor of a Binary Tree (I & III)  👑
 74) Lowest Common Ancestor of a Binary Search Tree  
 
 ## Графы
 75) Number of Islands  
-76) Graph Valid Tree  
-77) Number of Connected Components in an Undirected Graph  
+76) Graph Valid Tree  👑
+77) Number of Connected Components in an Undirected Graph  👑
 78) Clone Graph  
 79) Course Schedule  
 80) Pacific Atlantic Water Flow  
@@ -139,8 +139,8 @@
 ## Математика
 98) Implement Rand10() Using Rand7()  
 99) Sum of Two Integers  
-100) One Edit Distance  
-101) Line Reflection  
+100) One Edit Distance  👑
+101) Line Reflection  👑
 
 ## Trie
 102) Implement Trie (Prefix Tree)  
@@ -164,10 +164,10 @@
 
 ## Матрицы / Стек / DP
 109) Maximal Rectangle 
-110) Max Stack  
+110) Max Stack  👑
 
 ## Графы / Topological Sort
-111) Alien Dictionary  
+111) Alien Dictionary  👑
 
 ## Бинарный поиск
 112) Median of Two Sorted Arrays  

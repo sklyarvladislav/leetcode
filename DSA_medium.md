@@ -569,4 +569,242 @@ space complexity:$$ O(n) $$
 
 ### 1 способ:
 
-- 
+-  идти по двум спискам, брать максимальный минимум от каждого и минимальный максимум от каждого, если начало меньше равно конца то добавляем этот интервал в наш результат, затем если конец равен концу одного из списков то мы передвигаем указатель
+
+```go
+func getInterval(A, B []int) (int, int) {
+	start := max(A[0], B[0])
+	end := min(A[1], B[1])
+	return start, end
+}
+
+func intervalIntersection(firstList [][]int, secondList [][]int) [][]int {
+	result := make([][]int, 0)
+	
+	for i, j := 0, 0; i < len(firstList) && j < len(secondList); {
+		start, end := getInterval(firstList[i], secondList[j])
+		
+		if start <= end {
+			result = append(result, []int{start, end})
+		}
+		if firstList[i][1] == end {
+			i++
+		}
+		if secondList[j][1] == end {
+			j++
+		}
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n + m) $$
+space complexity:$$ O(min(n, m)) $$
+
+---
+## [Group Anagrams](https://leetcode.com/problems/group-anagrams)
+
+### 1 способ:
+
+- заводим словарь в котором по ключу будем хранить паттерн, те слова которые удовлетворяют паттерну кладем под этот ключ в словаре
+
+```go
+func groupAnagrams(strs []string) [][]string {
+	seen := map[[26]int][]string{}
+	for _, str := range strs {
+		key := [26]int{}
+		
+		for i := 0; i < len(str); i++ {
+			key[str[i] - 'a']++
+		}
+		seen[key] = append(seen[key], str)
+	}
+	result := [][]string{}
+	
+	for _, value := range seen {
+		result = append(result, value)
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n \cdot m) $$
+space complexity:$$ O(n \cdot m) $$
+
+---
+## [Top K Frequent](https://leetcode.com/problems/top-k-frequent-elements/description)
+
+### 1 способ: 
+
+- создаем словарь где по значению записываем сколько раз встретилось в массиве, затем создаем двумерный массив где по индексу повтора будут лежать эти значения ну и будем идти с конца этого массива и сохранять в новый уже самые частые символы
+
+```go
+func topKFrequent(nums []int, k int) []int {
+	seen := make(map[int]int)
+	
+	for _, num := range nums {
+		seen[num]++
+	}
+	
+	bucket := make([][]int, len(nums)+1)
+	
+	for key, value := range seen {
+		bucket[value] = append(bucket[value], key)
+	}
+	
+	result := make([]int, 0, k)
+	for i := len(bucket) - 1; i >= 0; i-- {
+		for _, num := range bucket[i] {
+			if k > 0 {
+				result = append(result, num)
+			}
+		}	
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [LRU Cache](https://leetcode.com/problems/lru-cache)
+
+### 1 способ:
+
+- через двусвязный список и хеш-мапу
+
+```go
+type LRUCache struct {
+	Head, Tail *Node
+	Mp map[int]*Node
+	Capacity int
+}
+
+func newLRUCache(head, tail *Node, cap int) LRUCache {
+	return LRUCache{
+		Head: head,
+		Tail: tail,
+		Mp: make(map[int]*Node),
+		Capacity: cap,
+	}
+}
+
+type Node struct {
+	Next, Prev *Node
+	Key, Value int
+}
+
+func newNode(key, value int) *Node {
+	return &Node{
+		Key: key,
+		Value: value,
+	}
+}
+
+func Constructor(capacity int) LRUCache {
+	head, tail := newNode(0, 0), newNode(0, 0)
+	
+	head.Next = tail
+	tail.Prev = head
+	
+	return newLRUCache(head, tail, capacity)
+}
+
+func (this *LRUCache) Get(key int) int {
+	if n, ok := this.Mp[key]; ok {
+		this.remove(n)
+		this.insert(n)
+		return n.Value
+	}
+	
+	return -1
+}
+
+func (this *LRUCache) Put(key int, value int) {
+	if _, ok := this.Mp[key]; ok {
+		this.remove(this.Mp[key])
+	}
+	
+	if len(this.Mp) == this.Capacity {
+		this.remove(this.Tail.Prev)
+	}
+	
+	this.insert(newNode(key, value))
+}
+
+func (this *LRUCache) remove(node *Node) {
+	delete(this.Mp, node.Key)
+	node.Prev.Next = node.Next
+	node.Next.Prev = node.Prev
+}
+
+func (this *LRUCache) insert(node *Node) {
+	this.Mp[node.Key] = node
+	next := this.Head.Next
+	this.Head.Next = node
+	node.Prev = this.Head
+	
+	next.Prev = node
+	node.Next = next
+}
+```
+
+---
+## [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description)
+
+### 1 способ: 
+
+- через массивчик и хеш-мапу
+
+```go
+type RandomizedSet struct {
+	arr []int
+	size int
+	set map[int]int
+}
+
+func Constructor() RandomizedSet {
+	return RandomizedSet{
+		arr: make([]int, 0),
+		size: 0,
+		set: make(map[int]int),
+	}
+}
+
+func (this *RandomizedSet) Insert(val int) bool {
+	if _, ok := this.set[val]; ok {
+		return false
+	}
+	
+	this.arr = append(this.arr, val)
+	this.set[val] = this.size
+	this.size++
+	
+	return true
+}
+
+func (this *RandomizedSet) Remove(val int) bool {
+	index, ok := this.set[val]
+	if !ok {
+		return false
+	}
+	
+	lastElement := this.arr[this.size-1]
+	this.arr[index] = lastElement
+	this.set[lastElement] = index
+	
+	this.arr = this.arr[:this.size-1]
+	delete(this.set, val)
+	this.size--
+	return true
+}
+
+func (this *RandomizedSet) GetRandom() int {
+	index := rand.Intn(this.size)
+	return this.arr[index]
+}
+```
+
+---
+## 
