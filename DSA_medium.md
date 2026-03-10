@@ -1,4 +1,4 @@
-	## [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
+## [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
 ### 1 способ:
 
 - при помощи скользящего окна и вспомогательного массива где будем указывать последний индекс встречающегося символа
@@ -1061,4 +1061,177 @@ time complexity:$$ O(n) $$
 space complexity:$$ O(h) $$
 
 ---
-## [Binary Tree Level Order Traversal]()
+## [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
+
+### 1 способ:
+
+- с помощью бфс проходим и передаем через указатели текущий уровень и наш двумерный массив, и добавляем значения по индексам = уровень
+
+```go
+func levelOrder(root *TreeNode) [][]int {
+	result, level := [][]int{}, 0
+	traversal(root, &result, &level)
+	return result
+}
+
+func traversal(node *TreeNode, result *[][]int, level *int) {
+	if node == nil { return }
+	if len(*result) < *level + 1 {
+		*result = append(*result, []int{node.Val})
+	} else {
+		(*result)[*level] = append((*result)[*level], node.Val)
+	}
+	*level++
+	traversal(node.Left, result, level)
+	traversal(node.Right, result, level)
+	*level--
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(h) $$
+
+---
+## [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description)
+
+### 1 способ:
+
+- у нас всегда первый узел в preorder это корневой узелй у поддерева, поэтому мы потом ищем по какому индексу хранится в inorder корневой узел, где слева от узла вся левая ветка, справа вся правая ветка и тогда строим дерево рекурсивно передавая массива
+
+```go
+func buildTree(preorder, inorder []int) *TreeNode {
+	seen := make(map[int]int)
+	for index, value := range inorder {
+		seen[value] = index
+	}
+	return build(preorder, inorder, 0, seen)
+}
+
+func build(preorder, inorder []int, shift int, seen map[int]int) *TreeNode {
+	if len(preorder) == 0 { return nil }
+	
+	index := seen[preorder[0]] - shift
+	
+	return &TreeNode{
+		Val: preorder[0],
+		Left: build(preorder[1:index+1], inorder[:index], shift, seen),
+		Right: build(preorder[index+1:], inorder[index+1:], shift+index+1, seen),
+	}
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
+
+### 1 способ:
+
+- при помощи дфс находим корневой узел, просто погружаемся влево и вправо, как только у нас нашелся рез рекурсия вернет корневой узел и просто возвращаем где нашлось
+
+```go
+func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
+	if root == nil { return nil }
+	if root == p || root == q { return root }
+	
+	left := lowestCommonAncestor(root.Left, p, q)
+	right := lowestCommonAncestor(root.Right, p, q)
+	
+	if left != nil && right != nil { return root }
+	if left != nil {
+		return left
+	} else {
+		return right
+	}
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)
+
+### 1 способ:
+
+- если оба узла меньше корня то идти влево по дереву, если больше то вправо, если разошлись то вернуть корень)
+
+```go
+func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
+	for root != nil {
+		if p.Val < root.Val && q.Val < root.Val {
+			root = root.Left
+		} else if p.Val > root.Val && q.Val > root.Val {
+			root = root.Right
+		} else {
+			return root
+		}
+	}
+	return nil
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
+
+---
+## [Number of Islands](https://leetcode.com/problems/number-of-islands/description)
+
+### 1 способ: 
+
+- идти двойным циклом по всему массиву, если нашли 1 то запускаем dfs алгоритм и затапливаем весь остров путем замены 1 на 0
+
+```go
+func numIslands(grid [][]byte) int {
+	result := 0
+	for x := 0; x < len(grid); x++ {
+		for y := 0; y < len(grid[0]); y++ {
+			if grid[x][y] == '1' {
+				result++
+				DeepFirstSearch(x, y, grid)
+			}
+		}
+	}
+	return result
+}
+
+func DeepFirstSearch(x, y int, grid [][]byte) {
+	if x < 0 || x > len(grid)-1 || y < 0 || y > len(grid[0])-1 || grid[x][y] == '0' {
+		return
+	}
+	grid[x][y] = '0'
+	DeepFirstSearch(x+1, y, grid)
+	DeepFirstSearch(x-1, y, grid)
+	DeepFirstSearch(x, y+1, grid)
+	DeepFirstSearch(x, y-1, grid)
+}
+```
+time complexity:$$ O(n \cdot m) $$
+space complexity:$$ O(n \cdot m) $$
+
+---
+## [Clone Graph](https://leetcode.com/problems/clone-graph)
+
+### 1 способ:
+
+- дфс делаем и добавляем не пройденный узел в список соседей
+
+```go
+func cloneGraph(node *Node) *Node {
+	if node == nil { return nil }
+	copies := make([]*Node, 101)
+	dfs(node, copies)
+	return copies[node.Val]
+}
+
+func dfs(node *Node, copies []*Node) {
+	newNode := new(Node)
+	newNode.Val = node.Val
+	copies[node.Val] = newNode
+	
+	for _, neighbor := range node.Neighbors {
+		if copies[neighbor.Val] == nil {
+			dfs(neighbor, copies)
+		}
+		newNode.Neighbors = append(newNode.Neighbors, copies[neighbor.Val])
+	}
+}
+```
+
