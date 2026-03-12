@@ -1455,4 +1455,183 @@ time complexity:$$ O(N \cdot M \cdot 3^L) $$space complexity:$$ O(N \cdot M) $$
 
 ### 1 способ:
 
+- создаем массив и потом по нему бегаем собираем последовательности
+
+```go
+func longestConsecutive(nums []int) int {
+	if len(nums) == 0 { return 0 }
+	
+	seen := make(map[int]bool)
+	for _, num := range nums {
+		seen[num] = true
+	}
+	result := 1
+	
+	for num := range seen {
+		if !seen[num-1] {
+			current := num 
+			template := 1
+			
+			for seen[current+1] {
+				current++
+				template++
+			}
+			
+			result = max(result, template)
+		}
+	}
+	
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Perfect Squares](https://leetcode.com/problems/perfect-squares/description/)
+
+### 1 способ: 
+
+- мы создаем мапу в которой будем сохранять для каждого числа за сколько квадратом мы дошли до этого числа а затем выводим ответ для нашего числа
+
+```go
+func numSquares(n int) int {
+	seen := make([]int, n+1)
+	seen[0] = 0
+	for i := 1; i <= n; i++ {
+		seen[i] = math.MaxInt32
+	}
+	
+	for i := 1; i <= n; i++ {
+		for j := 1; j*j <= i; j++ {
+			seen[i] = min(seen[i], seen[i-j*j]+1)
+		}
+	}	
+	
+	return seen[n]
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Unique Paths](https://leetcode.com/problems/unique-paths/description)
+
+### 1 способ:
+
+- оч крутой способ через подсчет просто сочетания
+
+```go 
+func uniquePaths(m, n int) int {
+	result := 1
+	for i := 1; i <= m-1; i++ {
+		result = result * (n-1+i)/i
+	}
+	return result
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
+
+---
+## [Decode Ways](https://leetcode.com/problems/decode-ways/description)
+
+### 1 способ:
+
+-  создаем функцию которая проверяет может ли быть эта подстрока буквой, еще одну функцию которая создает дерево разветвлений от слова и затем считаем их
+
+```go
+func isValid(code, length int) bool {
+	if length == 1 {
+		return code >= 1 && code <= 9
+	} else {
+		return code >= 10 && code <= 26
+	}
+}
+
+func countOfDecoding(i int, s string, seen []int) int {
+	if i >= len(s) { return 1 }
+	if seen[i] != -1 { return seen[i] }
+	seen[i] = 0
+	if isValid(int(s[i]) - '0', 1) {
+		seen[i] += countOfDecoding(i+1, s, seen)
+	} 
+	if i < len(s)-1 && isValid((int(s[i] - '0'))*10 + int(s[i+1] - '0'), 2) {
+		seen[i] += countOfDecoding(i+2, s, seen)
+	} 
+	
+	return seen[i]
+}
+
+func numDecodings(s string) int {
+	seen := make([]int, len(s))
+	for i := range seen {
+		seen[i] = -1
+	}
+	return countOfDecoding(0, s, seen)
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Word Break](https://leetcode.com/problems/word-break)
+
+### 1 способ:
+
+- создаем мапу со словами которые есть в нашем соваре, а затем двумя циклами бежим по нашей строке и проверяем можем ли мы дойти до каждой точкипри помощи слов в словаре, цикл движется до конца, вложенный движется от первого указателя в начало
+
+```go
+func wordBreak(s string, wordDict []string) bool {
+	wordMap := make(map[string]bool)
+	maxLen := 0
+	for _, word := range wordDict {
+		wordMap[word] = true
+		maxLen = max(maxLen, len(word))
+	}
+	
+	seen := make([]bool, len(s)+1)
+	seen[0] = true
+	
+	for i := 1; i <= len(s); i++ {
+		for j := i-1; j >= 0; j-- {
+			if i-j > maxLen { break }
+			if seen[j] && wordMap[s[j:i]] {
+				seen[i] = true
+				break
+			}
+		}
+	}
+	
+	return seen[len(s)]
+}
+```
+time complexity:$$ O(n \cdot min(wordDict, len(s))) $$
+space complexity:$$ O(n) $$
+
+---
+## [House Robber](https://leetcode.com/problems/house-robber/description)
+
+### 1 способ: 
+
+- при помощи динамического программирования проходимся  по всему массиву и если куш от этого дома меньше чем от предыдущего то пропускаем при помощи нахождения максимума
+
+```go 
+func rob(nums []int) int {
+	if len(nums) == 1 { return nums[0] }
+	l1, l2 := nums[0], max(nums[0], nums[1])
+	for i := 2; i < len(nums); i++ {
+		l2, l1 = max(l1+nums[i], l2), l2
+	}
+	return l2
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(1) $$
+
+---
+## [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description)
+
+### 1 способ:
+
 - 
