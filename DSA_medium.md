@@ -1803,4 +1803,161 @@ space complexity:$$ O(n) $$
 
 ### 1 способ:
 
-- 
+- при помощи стека, сначала сплитуем по слешу, затем пробегаемся по значениям, пропускаем мусор в виде . и пустых значений, а затем складываем в результат и джоин прописываем
+
+```go
+func simplifyPath(path string) string {
+	afterSplit := strings.Split(path, "/")
+	result := make([]string, 0)
+	for _, element := range afterSplit {
+		if element == "." || element == "" { continue }
+		if element == ".." {
+			if len(result) >= 1 {
+				result = result[:len(result)-1]
+			} 
+		} else {
+			result = append(result, element)
+		}
+	}
+	
+	return "/" + strings.Join(result, "/")
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
+
+### 1 способ:
+
+- при помощи стека, завести словарь с операторами в ключах и функциями в значениях, и потом стеком проходить по строке и вычислять значение
+
+```go
+func evalRPN(tokens []string) int {
+	operators := map[string]func(int, int) int {
+		"+": func(a, b int) int { return a + b },
+		"-": func(a, b int) int { return a - b },
+		"/": func(a, b int) int { return a / b },
+		"*": func(a, b int) int { return a * b },
+	}
+	stack := make([]int, 0, len(tokens))
+	for _, token := range tokens {
+		if operator, ok := operators[token]; ok {
+			a, b := stack[len(stack)-2], stack[len(stack)-1]
+			stack = append(stack[:len(stack)-2], operator(a, b))
+		} else {
+			num, _ := strconv.Atoi(token)
+			stack = append(stack, num)
+		}
+	}
+	
+	return stack[0]
+}
+```
+time complexity:$$ O(n) $$
+space complexity:$$ O(n) $$
+
+---
+## [Implement Rand10() Using Rand7()](https://leetcode.com/problems/implement-rand10-using-rand7/description)
+
+### 1 способ: 
+
+- Я генерирую число от 1 до 49 через два `rand7()`, беру только диапазон до 40, чтобы делилось на 10, и через `% 10` равномерно маплю в 1..10. Остальные значения отбрасываю.
+
+```go
+func rand10() int {
+	for {
+		num := (rand7()-1)*7 + rand7()
+		if num <= 40 {
+			return (num-1)%10 + 1
+		}
+	}
+}
+```
+time complexity:$$ O(1) $$
+space complexity:$$ O(1) $$
+
+---
+## [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers)
+
+### 1 способ:
+
+- Алгоритм имитирует сложение в столбик: XOR даёт сумму без переноса, AND + сдвиг вычисляет перенос. Процесс повторяется, пока переносы не исчезнут.
+
+```go
+func getSum(a, b int) int {
+	for b != 0 {
+		sum := a ^ b
+		carry := (a & b) << 1
+		a = sum
+		b = carry
+	}
+	
+	return a
+}
+```
+time complexity:$$ O(1) $$
+space complexity:$$ O(1) $$
+
+---
+## [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description)
+
+```go
+var pool [100000]Trie
+var pId int
+
+type Trie struct {
+	nodes [26]*Trie
+	isEnd bool
+}
+
+func Constructor() Trie {
+	pId = 0
+	return Trie{}
+}
+
+func newNode() *Trie {
+	pId++
+	node := &pool[pId]
+	node.nodes = [26]*Trie{}
+	node.isEnd = false
+	return &pool[pId]
+}
+
+func (this *Trie) Insert(word string) {
+	current := this
+	for _, char := range word {
+		index := char - 'a'
+		if current.nodes[index] == nil {
+			current.nodes[index] = newNode()
+		}
+		current = current.nodes[index]
+	}
+	
+	current.isEnd = true
+}
+
+func (this *Trie) Find(word string) *Trie {
+	current := this
+	
+	for _, char := range word {
+		index := char - 'a'
+		if current.nodes[index] == nil {
+			return nil
+		}
+		current = current.nodes[index]
+	}
+	
+	return current
+}
+
+func (this *Trie) Search(word string) bool {
+	node := this.Find(word)
+	return node != nil && node.isEnd
+}
+
+func (this *Trie) StartsWith(prefix string) bool {
+	return this.Find(prefix) != nil
+}
+```
