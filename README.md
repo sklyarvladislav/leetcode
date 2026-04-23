@@ -17,7 +17,7 @@
 
 ### 📦 Array
 
-1. [Two Sum]([https://github/sklyar-vlad/leetcode/tree/main/easy/array.md](https://github.com/sklyar-vlad/leetcode/blob/main/easy/array/Two%20Sum/Two%20Sum.md))
+1. [Two Sum](./easy/array/twoSum/twoSum.md)
 2. 
 
 
