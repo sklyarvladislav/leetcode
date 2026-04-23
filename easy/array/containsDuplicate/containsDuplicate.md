@@ -20,4 +20,5 @@ func containsDuplicate(nums []int) bool {
 $$ O(n) $$
 ### Space complexity:
 $$ O(n) $$
+
 ---
