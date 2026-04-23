@@ -8,7 +8,7 @@
 ## 📊 Progress
 | Difficulty | Count |
 | ---------- | ----- |
-| 🟢 Easy    | 2     |
+| 🟢 Easy    | 3     |
 | 🟡 Medium  | 0     |
 | 🔴 Hard    | 0     |
 
@@ -19,6 +19,7 @@
 
 1. [Two Sum](./easy/array/twoSum/twoSum.md)
 2. [Contains Duplicate](./easy/array/containsDuplicate/containsDuplicate.md)
+3. [Contains Duplicate II](./easy/array/containsDuplicateII/containsDuplicateII.md)
 
 
 ---
