@@ -1,9 +1,7 @@
 ## [Two Sum](https://leetcode.com/problems/two-sum/description/)
-
+### Description:
 ![Two Sum](./twoSum.png)
-
-**Solution:**
-
+### Solution:
 ```Go
 func twoSum(nums []int, target int) []int {
 	seen := make(map[int]int)
@@ -18,12 +16,8 @@ func twoSum(nums []int, target int) []int {
 	return []int{}
 }
 ```
-
-![Two Sum](./twoSumSolved.png)
-
 ### Time complexity: 
 $$ O(n) $$
 ### Space complexity:
 $$ O(n) $$
-
 ---

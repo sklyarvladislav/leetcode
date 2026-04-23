@@ -1,4 +1,4 @@
-# LeetCode Solutions
+# LeetCode Tasks
 
 ## 👤 Profile
 
@@ -8,7 +8,7 @@
 ## 📊 Progress
 | Difficulty | Count |
 | ---------- | ----- |
-| 🟢 Easy    | 1     |
+| 🟢 Easy    | 2     |
 | 🟡 Medium  | 0     |
 | 🔴 Hard    | 0     |
 
@@ -18,7 +18,7 @@
 ### 📦 Array
 
 1. [Two Sum](./easy/array/twoSum/twoSum.md)
-2. 
+2. [Contains Duplicate](./easy/array/containsDuplicate/containsDuplicate.md)
 
 
 ---
@@ -36,4 +36,3 @@
 
 
 ---
-
