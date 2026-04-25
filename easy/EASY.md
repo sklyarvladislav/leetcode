@@ -6,3 +6,6 @@
 | 4   | Valid Anagram                 | 📦 Array/HashMap | [📄 Go](./array/validAnagram/validAnagram.md)                           |
 | 5   | Intersection of Two Arrays    | 📦 Array/HashMap | [📄 Go](./array/intersectionofTwoArrays/intersectionOfTwoArrays.md)     |
 | 6   | Intersection of Two Arrays II | 📦 Array/HashMap | [📄 Go](./array/intersectionofTwoArraysII/intersectionOfTwoArraysII.md) |
+| 7   | Majority Element              | 📦 Array/HashMap | [📄 Go](./array/majorityElement/majorityElement.md)                     |
+| 8   | Missing Number                | 📦 Array/HashMap | [📄 Go](./array/missingNumber/missingNumber.md)                         |
+| 9   | Move Zeroes                   | 📦 Array/HashMap | [📄 Go](./array/moveZeroes/moveZeroes.md)                               |

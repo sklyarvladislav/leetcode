@@ -2,15 +2,15 @@
 
 ### Array / HashMap
 
-1. Two Sum
-2. Contains Duplicate
-3. Contains Duplicate II
-4. Valid Anagram
-5. Intersection of Two Arrays
-6. Intersection of Two Arrays II
-7. Majority Element
-8. Missing Number
-9. Move Zeroes
+1. ==Two Sum==
+2. ==Contains Duplicate==
+3. ==Contains Duplicate II==
+4. ==Valid Anagram==
+5. ==Intersection of Two Arrays==
+6. ==Intersection of Two Arrays II==
+7. ==Majority Element==
+8. ==Missing Number==
+9. ==Move Zeroes==
 10. Plus One
 11. Remove Duplicates from Sorted Array
 12. Remove Element
