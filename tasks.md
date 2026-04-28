@@ -11,9 +11,9 @@
 7. ==Majority Element==
 8. ==Missing Number==
 9. ==Move Zeroes==
-10. Plus One
-11. Remove Duplicates from Sorted Array
-12. Remove Element
+10. ==Plus One==
+11. ==Remove Duplicates from Sorted Array==
+12. ==Remove Element==
 13. Find All Numbers Disappeared in an Array
 14. Third Maximum Number
 15. Find Pivot Index
