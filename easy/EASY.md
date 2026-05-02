@@ -21,6 +21,9 @@
 | 19  | Summary Ranges                           | 📦 Array/HashMap | [📄 Go](./array/summaryRanges/summaryRanges.md)                                           |
 | 20  | Monotonic Array                          | 📦 Array/HashMap | [📄 Go](./array/monotonicArray/monotonicArray.md)                                         |
 | 21  | Sort Array By Parity                     | 📦 Array/HashMap | [📄 Go](./array/sortArrayByParity/sortArrayByParity.md)                                   |
-| 19  | Sort Array By Parity II                  | 📦 Array/HashMap | [📄 Go](./array/sortArrayByParityII/sortArrayByParityII.md)                               |
-| 20  | Squares of a Sorted Array                | 📦 Array/HashMap | [📄 Go](./array/squaresOfASortedArray/squaresOfASortedArray.md)                           |
-| 21  | Height Checker                           | 📦 Array/HashMap | [📄 Go](./array/heightChecker/heightChecker.md)                                           |
+| 22  | Sort Array By Parity II                  | 📦 Array/HashMap | [📄 Go](./array/sortArrayByParityII/sortArrayByParityII.md)                               |
+| 23  | Squares of a Sorted Array                | 📦 Array/HashMap | [📄 Go](./array/squaresOfASortedArray/squaresOfASortedArray.md)                           |
+| 24  | Height Checker                           | 📦 Array/HashMap | [📄 Go](./array/heightChecker/heightChecker.md)                                           |
+| 25  | Relative Sort Array                      | 📦 Array/HashMap | [📄 Go](./array/relativeSortArray/relativeSortArray.md)                                   |
+| 26  | Unique Number of Occurrences             | 📦 Array/HashMap | [📄 Go](./array/uniqueNumberOfOccurrences/uniqueNumberOfOccurrences.md)                   |
+| 27  | Find Lucky Integer in an Array           | 📦 Array/HashMap | [📄 Go](./array/findLuckyIntegerInAnArray/findLuckyIntegerInAnArray.md)                   |
