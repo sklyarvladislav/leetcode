@@ -27,3 +27,6 @@
 | 25  | Relative Sort Array                      | 📦 Array/HashMap | [📄 Go](./array/relativeSortArray/relativeSortArray.md)                                   |
 | 26  | Unique Number of Occurrences             | 📦 Array/HashMap | [📄 Go](./array/uniqueNumberOfOccurrences/uniqueNumberOfOccurrences.md)                   |
 | 27  | Find Lucky Integer in an Array           | 📦 Array/HashMap | [📄 Go](./array/findLuckyIntegerInAnArray/findLuckyIntegerInAnArray.md)                   |
+| 28  | Numbers of Good Pairs                    | 📦 Array/HashMap | [📄 Go](./array/numberOfGoodPairs/numberOfGoodPairs.md)                                   |
+| 29  | Kids With the Greatest Number of Candies | 📦 Array/HashMap | [📄 Go](./array/kidsWithTheGreatestNumberOfCandies/kidsWithTheGreatestNumberOfCandies.md) |
+| 30  | Shuffle the Array                        | 📦 Array/HashMap | [📄 Go](./array/shuffleTheArray/shuffleTheArray.md)                                       |

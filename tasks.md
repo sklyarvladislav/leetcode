@@ -29,9 +29,9 @@
 25. ==Relative Sort Array==
 26. ==Unique Number of Occurrences==
 27. ==Find Lucky Integer in an Array==
-28. Number of Good Pairs
-29. Kids With the Greatest Number of Candies
-30. Shuffle the Array
+28. ==Number of Good Pairs==
+29. ==Kids With the Greatest Number of Candies==
+30. ==Shuffle the Array==
 31. Running Sum of 1d Array
 32. Richest Customer Wealth
 33. Concatenation of Array
