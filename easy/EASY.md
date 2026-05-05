@@ -30,3 +30,6 @@
 | 28  | Numbers of Good Pairs                    | 📦 Array/HashMap | [📄 Go](./array/numberOfGoodPairs/numberOfGoodPairs.md)                                   |
 | 29  | Kids With the Greatest Number of Candies | 📦 Array/HashMap | [📄 Go](./array/kidsWithTheGreatestNumberOfCandies/kidsWithTheGreatestNumberOfCandies.md) |
 | 30  | Shuffle the Array                        | 📦 Array/HashMap | [📄 Go](./array/shuffleTheArray/shuffleTheArray.md)                                       |
+| 31  | Running Sum of 1d Array                  | 📦 Array/HashMap | [📄 Go](./array/runningSumOf1dArray/runningSumOf1dArray.md)                               |
+| 32  | Richest Customer Wealth                  | 📦 Array/HashMap | [📄 Go](./array/richestCustomerWealth/richestCustomerWealth.md)                           |
+| 33  | Concatenation of Array                   | 📦 Array/HashMap | [📄 Go](./array/concatenationOfArray/concatenationOfArray.md)                             |
