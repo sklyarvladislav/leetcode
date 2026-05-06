@@ -35,9 +35,9 @@
 31. ==Running Sum of 1d Array==
 32. ==Richest Customer Wealth==
 33. ==Concatenation of Array==
-34. Build Array from Permutation
-35. Final Value of Variable After Performing Operations
-36. Maximum Number of Words Found in Sentences
+34. ==Build Array from Permutation==
+35. ==Final Value of Variable After Performing Operations==
+36. ==Maximum Number of Words Found in Sentences==
 37. Left and Right Sum Differences
 38. Find the Highest Altitude
 39. Count Items Matching a Rule
