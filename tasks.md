@@ -38,43 +38,42 @@
 34. ==Build Array from Permutation==
 35. ==Final Value of Variable After Performing Operations==
 36. ==Maximum Number of Words Found in Sentences==
-37. Left and Right Sum Differences
-38. Find the Highest Altitude
-39. Count Items Matching a Rule
-40. Smaller Numbers Than Current
-41. How Many Numbers Are Smaller Than the Current Number
-42. Decompress Run-Length Encoded List
-43. Create Target Array in the Given Order
-44. Check If N and Its Double Exist
-45. Valid Mountain Array
-46. Duplicate Zeros
-47. Replace Elements with Greatest Element on Right Side
-48. Keep Multiplying Found Values by Two
-49. Check if Array Is Sorted and Rotated
-50. Make Two Arrays Equal by Reversing Subarrays
-51. Find the Difference of Two Arrays
-52. Find the Prefix Common Array of Two Arrays
-53. Count Common Words With One Occurrence
-54. Number of Employees Who Met the Target
-55. Find Maximum Number of String Pairs
-56. Find Words Containing Character
-57. Split the Array
-58. Count Pairs Whose Sum is Less than Target
-59. Find the Array Concatenation Value
-60. Find Smallest Letter Greater Than Target
-61. Find Numbers with Even Number of Digits
-62. Majority Element
-63. Missing Number
-64. Monotonic Array
-65. Richest Customer Wealth
-66. Number of Good Pairs
-67. Kids With the Greatest Number of Candies
-68. Shuffle the Array
-69. Build Array from Permutation
-70. Final Value of Variable After Performing Operations
-71. Count Items Matching a Rule
-72. Smaller Numbers Than Current
-73. Create Target Array in the Given Order
+37. ==Left and Right Sum Differences==
+38. ==Find the Highest Altitude==
+39. ==Count Items Matching a Rule==
+40. ==How Many Numbers Are Smaller Than the Current Number==
+41. Decompress Run-Length Encoded List
+42. Create Target Array in the Given Order
+43. Check If N and Its Double Exist
+44. Valid Mountain Array
+45. Duplicate Zeros
+46. Replace Elements with Greatest Element on Right Side
+47. Keep Multiplying Found Values by Two
+48. Check if Array Is Sorted and Rotated
+49. Make Two Arrays Equal by Reversing Subarrays
+50. Find the Difference of Two Arrays
+51. Find the Prefix Common Array of Two Arrays
+52. Count Common Words With One Occurrence
+53. Number of Employees Who Met the Target
+54. Find Maximum Number of String Pairs
+55. Find Words Containing Character
+56. Split the Array
+57. Count Pairs Whose Sum is Less than Target
+58. Find the Array Concatenation Value
+59. Find Smallest Letter Greater Than Target
+60. Find Numbers with Even Number of Digits
+61. Majority Element
+62. Missing Number
+63. Monotonic Array
+64. Richest Customer Wealth
+65. Number of Good Pairs
+66. Kids With the Greatest Number of Candies
+67. Shuffle the Array
+68. Build Array from Permutation
+69. Final Value of Variable After Performing Operations
+70. Count Items Matching a Rule
+71. Smaller Numbers Than Current
+72. Create Target Array in the Given Order
 
 ### Two Pointers
 

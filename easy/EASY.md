@@ -36,3 +36,7 @@
 | 34  | Build Array From Permutation                        | 📦 Array/HashMap | [📄 Go](./array/buildArrayFromPermutation/buildArrayFromPermutation.md)                                         |
 | 35  | Final Value of Variable After Performing Operations | 📦 Array/HashMap | [📄 Go](./array/finalValueOfVariableAfterPerformingOperations/finalValueOfVariableAfterPerformingOperations.md) |
 | 36  | Maximum Number of Words Found In Sentences          | 📦 Array/HashMap | [📄 Go](./array/maximumNumberOfWordsFoundInSentences/maximumNumberOfWordsFoundInSentences.md)                   |
+| 37  | Left and Right Sum Differences                      | 📦 Array/HashMap | [📄 Go](./array/leftAndRightSumDifferences/leftAndRightSumDifferences.md)                                       |
+| 38  | Find the Highest Altitude                           | 📦 Array/HashMap | [📄 Go](./array/findTheHighestAltitude/findTheHighestAltitude.md)                                               |
+| 39  | Count Items Matching a Rule                         | 📦 Array/HashMap | [📄 Go](./array/countItemsMatchingARule/countItemsMatchingARule.md)                                             |
+| 40  | How Many Numbers Are Smaller                        | 📦 Array/HashMap | [📄 Go](./array/howManyNumbersAreSmaller/howManyNumbersAreSmaller.md)                                           |
