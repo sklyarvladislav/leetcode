@@ -40,3 +40,8 @@
 | 38  | Find the Highest Altitude                           | 📦 Array/HashMap | [📄 Go](./array/findTheHighestAltitude/findTheHighestAltitude.md)                                               |
 | 39  | Count Items Matching a Rule                         | 📦 Array/HashMap | [📄 Go](./array/countItemsMatchingARule/countItemsMatchingARule.md)                                             |
 | 40  | How Many Numbers Are Smaller                        | 📦 Array/HashMap | [📄 Go](./array/howManyNumbersAreSmaller/howManyNumbersAreSmaller.md)                                           |
+| 41  | Decompress Run-Length Encoded List                  | 📦 Array/HashMap | [📄 Go](./array/decompressRunLengthEncodedList/decompressRunLengthEncodedList.md)                               |
+| 42  | Create Target Array in the Given Order              | 📦 Array/HashMap | [📄 Go](./array/createTargetArrayInTheGivenOrder/createTargetArrayInTheGivenOrder.md)                           |
+| 43  | Check If N and Its Double Exist                     | 📦 Array/HashMap | [📄 Go](./array/checkIfNAndItsDoubleExist/checkIfNAndItsDoubleExist.md)                                         |
+| 44  | Valid Mountain Array                                | 📦 Array/HashMap | [📄 Go](./array/validMountainArray/validMountainArray.md)                                                       |
+| 45  | Duplicate Zeros                                     | 📦 Array/HashMap | [📄 Go](./array/duplicateZeros/duplicateZeros.md)                                                               |

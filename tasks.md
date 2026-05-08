@@ -42,11 +42,11 @@
 38. ==Find the Highest Altitude==
 39. ==Count Items Matching a Rule==
 40. ==How Many Numbers Are Smaller Than the Current Number==
-41. Decompress Run-Length Encoded List
-42. Create Target Array in the Given Order
-43. Check If N and Its Double Exist
-44. Valid Mountain Array
-45. Duplicate Zeros
+41. ==Decompress Run-Length Encoded List==
+42. ==Create Target Array in the Given Order==
+43. ==Check If N and Its Double Exist==
+44. ==Valid Mountain Array==
+45. ==Duplicate Zeros==
 46. Replace Elements with Greatest Element on Right Side
 47. Keep Multiplying Found Values by Two
 48. Check if Array Is Sorted and Rotated
