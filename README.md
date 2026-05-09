@@ -2,8 +2,8 @@
 
 ## 👤 Profile
 
-🔗 https://leetcode.com/u/sklyarvlad
-📋 [list of tasks](./tasks.md)
+- 🔗 https://leetcode.com/u/sklyarvlad
+- 📋 [list of tasks](./tasks.md)
 
 ---
 ## 📊 Progress
