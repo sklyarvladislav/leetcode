@@ -45,3 +45,8 @@
 | 43  | Check If N and Its Double Exist                     | 📦 Array/HashMap | [📄 Go](./array/checkIfNAndItsDoubleExist/checkIfNAndItsDoubleExist.md)                                         |
 | 44  | Valid Mountain Array                                | 📦 Array/HashMap | [📄 Go](./array/validMountainArray/validMountainArray.md)                                                       |
 | 45  | Duplicate Zeros                                     | 📦 Array/HashMap | [📄 Go](./array/duplicateZeros/duplicateZeros.md)                                                               |
+| 46  | Replace Elements with Greatest Element              | 📦 Array/HashMap | [📄 Go](./array/replaceElementsWithGreatestElementOnRightSide/replaceElementsWithGreatestElementOnRightSide.md) |
+| 47  | Keep Multiplying Found Values by Two                | 📦 Array/HashMap | [📄 Go](./array/keepMultiplyingFoundValuesByTwo/keepMultiplyingFoundValuesByTwo.md)                             |
+| 48  | Check if Array Is Sorted and Rotated                | 📦 Array/HashMap | [📄 Go](./array/checkIfArrayIsSortedAndRotated/checkIfArrayIsSortedAndRotated.md)                               |
+| 49  | Make Two Arrays Equal by Reversing Subarrays        | 📦 Array/HashMap | [📄 Go](./array/makeTwoArraysEqualByReversingSubarrays/makeTwoArraysEqualByReversingSubarrays.md)               |
+| 50  | Find the Difference of Two Arrays                   | 📦 Array/HashMap | [📄 Go](./array/findTheDifferenceOfTwoArrays/findTheDifferenceOfTwoArrays.md)                                   |
