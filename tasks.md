@@ -47,33 +47,32 @@
 43. ==Check If N and Its Double Exist==
 44. ==Valid Mountain Array==
 45. ==Duplicate Zeros==
-46. Replace Elements with Greatest Element on Right Side
-47. Keep Multiplying Found Values by Two
-48. Check if Array Is Sorted and Rotated
-49. Make Two Arrays Equal by Reversing Subarrays
-50. Find the Difference of Two Arrays
-51. Find the Prefix Common Array of Two Arrays
-52. Count Common Words With One Occurrence
-53. Number of Employees Who Met the Target
-54. Find Maximum Number of String Pairs
-55. Find Words Containing Character
-56. Split the Array
-57. Count Pairs Whose Sum is Less than Target
-58. Find the Array Concatenation Value
-59. Find Smallest Letter Greater Than Target
-60. Find Numbers with Even Number of Digits
-61. Majority Element
-62. Missing Number
-63. Monotonic Array
-64. Richest Customer Wealth
-65. Number of Good Pairs
-66. Kids With the Greatest Number of Candies
-67. Shuffle the Array
-68. Build Array from Permutation
-69. Final Value of Variable After Performing Operations
-70. Count Items Matching a Rule
-71. Smaller Numbers Than Current
-72. Create Target Array in the Given Order
+46. ==Replace Elements with Greatest Element on Right Side==
+47. ==Keep Multiplying Found Values by Two==
+48. ==Check if Array Is Sorted and Rotated==
+49. ==Make Two Arrays Equal by Reversing Subarrays==
+50. ==Find the Difference of Two Arrays==
+51. ==Count Common Words With One Occurrence==
+52. ==Number of Employees Who Met the Target==
+53. ==Find Maximum Number of String Pairs==
+54. ==Find Words Containing Character==
+55. ==Split the Array==
+56. Count Pairs Whose Sum is Less than Target
+57. Find the Array Concatenation Value
+58. Find Smallest Letter Greater Than Target
+59. Find Numbers with Even Number of Digits
+60. Majority Element
+61. Missing Number
+62. Monotonic Array
+63. Richest Customer Wealth
+64. Number of Good Pairs
+65. Kids With the Greatest Number of Candies
+66. Shuffle the Array
+67. Build Array from Permutation
+68. Final Value of Variable After Performing Operations
+69. Count Items Matching a Rule
+70. Smaller Numbers Than Current
+71. Create Target Array in the Given Order
 
 ### Two Pointers
 
@@ -404,6 +403,7 @@
 58. Determine if Two Strings Are Close
 59. Maximum Points You Can Obtain from Cards
 60. Shortest Unsorted Continuous Subarray
+61. Find the Prefix Common Array of Two Arrays
 
 ### Two Pointers
 

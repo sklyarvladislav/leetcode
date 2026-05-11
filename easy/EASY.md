@@ -50,3 +50,8 @@
 | 48  | Check if Array Is Sorted and Rotated                | 📦 Array/HashMap | [📄 Go](./array/checkIfArrayIsSortedAndRotated/checkIfArrayIsSortedAndRotated.md)                               |
 | 49  | Make Two Arrays Equal by Reversing Subarrays        | 📦 Array/HashMap | [📄 Go](./array/makeTwoArraysEqualByReversingSubarrays/makeTwoArraysEqualByReversingSubarrays.md)               |
 | 50  | Find the Difference of Two Arrays                   | 📦 Array/HashMap | [📄 Go](./array/findTheDifferenceOfTwoArrays/findTheDifferenceOfTwoArrays.md)                                   |
+| 51  | Count Common Words With One Occurrence              | 📦 Array/HashMap | [📄 Go](./array/countCommonWordsWithOneOccurrence/countCommonWordsWithOneOccurrence.md)                         |
+| 52  | Number of Employees Who Met the Target              | 📦 Array/HashMap | [📄 Go](./array/numberOfEmployeesWhoMetTheTarget/numberOfEmployeesWhoMetTheTarget.md)                           |
+| 53  | Find Maximum Number of String Pairs                 | 📦 Array/HashMap | [📄 Go](./array/findMaximumNumberOfStringPairs/findMaximumNumberOfStringPairs.md)                               |
+| 54  | Find Words Containing Character                     | 📦 Array/HashMap | [📄 Go](./array/findWordsContainingCharacter/findWordsContainingCharacter.md)                                   |
+| 55  | Split the Array                                     | 📦 Array/HashMap | [📄 Go](./array/splitTheArray/splitTheArray.md)                                                                 |

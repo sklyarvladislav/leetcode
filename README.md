@@ -9,6 +9,6 @@
 ## 📊 Progress
 | Difficulty                      | Count |
 | ------------------------------- | ----- |
-| 🟢 [Easy](./easy/EASY.md)       | 50    |
+| 🟢 [Easy](./easy/EASY.md)       | 55    |
 | 🟡 [Medium](./medium/MEDIUM.md) | 0     |
 | 🔴 [Hard](./hard/HARD.md)       | 0     |
