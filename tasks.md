@@ -61,18 +61,6 @@
 57. Find the Array Concatenation Value
 58. Find Smallest Letter Greater Than Target
 59. Find Numbers with Even Number of Digits
-60. Majority Element
-61. Missing Number
-62. Monotonic Array
-63. Richest Customer Wealth
-64. Number of Good Pairs
-65. Kids With the Greatest Number of Candies
-66. Shuffle the Array
-67. Build Array from Permutation
-68. Final Value of Variable After Performing Operations
-69. Count Items Matching a Rule
-70. Smaller Numbers Than Current
-71. Create Target Array in the Given Order
 
 ### Two Pointers
 
