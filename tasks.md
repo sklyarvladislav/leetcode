@@ -69,50 +69,49 @@
 77. Reverse String
 78. Reverse Vowels of a String
 79. Merge Sorted Array
-80. Move Zeroes
-81. Remove Duplicates from Sorted Array
-82. Remove Element
-83. Squares of a Sorted Array
-84. Sort Array By Parity
-85. Sort Array By Parity II
-86. Backspace String Compare
-87. DI String Match
-88. Intersection of Two Arrays
-89. Intersection of Two Arrays II
-90. Check If N and Its Double Exist
-91. Valid Palindrome II
-92. String Compression
-93. Merge Strings Alternately
-94. Reverse Prefix of Word
-95. Count Binary Substrings
-96. Minimum Difference Between Highest and Lowest of K Scores
-97. Find First Palindromic String in the Array
-98. Minimum Common Value
-99. Minimum Number of Moves to Seat Everyone
-100. Sentence Similarity III
-101. Apply Operations to an Array
-102. Faulty Keyboard
-103. Separate the Digits in an Array
-104. Find Closest Number to Zero
-105. Check If Two String Arrays are Equivalent
-106. Make The String Great
-107. Strobogrammatic Number
-108. Reverse Words in a String III
-109. Split a String in Balanced Strings
-110. Number of Senior Citizens
-111. Counting Words With a Given Prefix
-112. Truncate Sentence
-113. Merge Similar Items
-114. Find the K-Beauty of a Number
-115. Reverse String
-116. Reverse Vowels of a String
-117. Merge Strings Alternately
-118. Reverse Prefix of Word
-119. Split a String in Balanced Strings
-120. Make The String Great
-121. Find First Palindromic String in the Array
-122. Minimum Common Value
-123. Count Binary Substrings
+80. Remove Duplicates from Sorted Array
+81. Remove Element
+82. Squares of a Sorted Array
+83. Sort Array By Parity
+84. Sort Array By Parity II
+85. Backspace String Compare
+86. DI String Match
+87. Intersection of Two Arrays
+88. Intersection of Two Arrays II
+89. Check If N and Its Double Exist
+90. Valid Palindrome II
+91. String Compression
+92. Merge Strings Alternately
+93. Reverse Prefix of Word
+94. Count Binary Substrings
+95. Minimum Difference Between Highest and Lowest of K Scores
+96. Find First Palindromic String in the Array
+97. Minimum Common Value
+98. Minimum Number of Moves to Seat Everyone
+99. Sentence Similarity III
+100. Apply Operations to an Array
+101. Faulty Keyboard
+102. Separate the Digits in an Array
+103. Find Closest Number to Zero
+104. Check If Two String Arrays are Equivalent
+105. Make The String Great
+106. Strobogrammatic Number
+107. Reverse Words in a String III
+108. Split a String in Balanced Strings
+109. Number of Senior Citizens
+110. Counting Words With a Given Prefix
+111. Truncate Sentence
+112. Merge Similar Items
+113. Find the K-Beauty of a Number
+114. Reverse String
+115. Reverse Vowels of a String
+116. Merge Strings Alternately
+117. Reverse Prefix of Word
+118. Split a String in Balanced Strings
+119. Make The String Great
+120. Find First Palindromic String in the Array
+121. Minimum Common Value
+122. Count Binary Substrings
 
 ### Sliding Window
 
